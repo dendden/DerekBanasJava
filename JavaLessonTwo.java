@@ -9,6 +9,9 @@ public class JavaLessonTwo {
         if (userInput.hasNextInt()) {
             int numberEntered = userInput.nextInt();
             System.out.println("You entered " + numberEntered);
+            
+            int numberEnteredTimes2 = numberEntered * 2;
+            System.out.println(numberEntered + " times 2 equals " + numberEnteredTimes2);
         } else {
             System.out.println("Enter an integer next time");
         }
