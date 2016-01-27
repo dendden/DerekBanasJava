@@ -1,0 +1,10 @@
+import java.util.*;
+
+public class Lesson6 {
+	static Scanner userInput = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		divideByZero(2);
+	}
+
+}

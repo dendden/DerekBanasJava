@@ -1,19 +1,25 @@
+import java.util.*;
 
 public class Lesson6 {
+	static Scanner userInput = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		divideByZero(2);
-	}
-	
-	public static void divideByZero(int a) {
-		try {
-			System.out.println(a/0);
-		} catch (ArithmeticException e) {
-			System.out.println("Can't do that!");
-			System.out.println(e.getMessage());
-			System.out.println(e.toString());
-			e.printStackTrace();
+		System.out.print("How old are you?");
+		int age = checkValidAge();
+		
+		if ( age != 0 ) {
+			System.out.println("You are " + age + " years old.");
 		}
 	}
-
+	
+	public static int checkValidAge() {
+		try {
+			return userInput.nextInt();
+		}
+		catch (InputMismatchException e) {
+			userInput.next();
+			System.out.println("That's not a whole number!");
+			return 0;
+		}
+	}
 }
