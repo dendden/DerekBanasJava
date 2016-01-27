@@ -1,0 +1,12 @@
+import java.io.*;
+
+public class Lesson6 {
+	
+	public static void main(String[] args) {
+		getFile("./some_shit.txt");
+	}
+	
+	public static void getFile(String fileName) {
+		FileInputStream file = new FileInputStream(fileName);
+	}
+}
